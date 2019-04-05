@@ -17,3 +17,6 @@ df.t[df.w<0]=-1
 df.t[df.w>0]=0
 df.t[df.w==-1]=1
 print(df)
+
+#lag
+df['price_lag'] = df.groupby(['簡稱'])['收盤價'].shift(1)
