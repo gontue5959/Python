@@ -1,12 +1,26 @@
 import numpy as np
 
-x = np.linspace(-1, 1, 50)
+ar2 = np.array([[11,22,33],
+                [111,222,333]],dtype=np.int64)
+                
+ar3 = np.zeros((5,5))   #生成5*5的零矩陣
 
+ar5 = np.ones((5,5))
 
+ar6 = np.arange(10,20,2)    #生成數列
 
+b = np.linspace(-1, 1, 50)
 
+c = np.random.randn(10) #平均數為零，標準差為一的隨機
+d = np.random.randint(100,1000,5)
 
+#隨機選擇
+fruit = ['apple','egg','banana','water','dog','cat','bird','rice','good']
+the_choice = pd.DataFrame(np.random.choice(fruit, 100, replace=True).reshape(10,10))
+np.random.choice(fruit, size=(2,2))
+np.random.choice(fruit, size=(1,2))
 
-
+P = [0.7, 0.2, 0.1, 0, 0, 0, 0, 0, 0]
+ff  = pd.DataFrame(np.random.choice(fruit, replace=True, size=(10,10), p=P))
 
 
