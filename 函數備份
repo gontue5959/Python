@@ -1,3 +1,4 @@
+#from 網路
 #XIRR計算函數-------------------------------------------
 def xirr(transactions):
     years = [(ta[0] - transactions[0][0]).days / 365.0 for ta in transactions]
@@ -27,5 +28,13 @@ xirr(tas) #0.0100612640381
 
 
 
+#-----------------------------------------
+import datetime 
+from scipy import optimize 
 
+def xnpv(rate,cashflows): 
+    return sum([cf/(1+rate)**((t-t0).days/365.0) for (t,cf) in chron_order]) 
+
+def xirr(cashflows,guess=0.1): 
+    return optimize.newton(lambda r: xnpv(r,cashflows),guess) 
 
