@@ -1,0 +1,20 @@
+#迴圈產生變數
+for i in stock_list: 
+    locals()['X'+str(i)]=pd.DataFrame(ts.realtime.get(i))
+
+
+#字典連續迴圈變數
+df_all = {}
+for i in range(30):
+    # import datetime
+    # from datetime import date
+    date = datetime.date(2018,1,1)+datetime.timedelta(days=i)
+    date_str = date.strftime('%Y%m%d')
+    df_all['d'+str(i)] = pd.read_csv(date_str+' 每日自營商進出.csv',encoding='utf-8', sep=',',engine='python')
+    print(i)
+
+
+#顯示迴圈錯誤
+try:
+except:
+	print( dd ) 
