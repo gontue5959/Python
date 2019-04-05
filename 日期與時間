@@ -1,4 +1,33 @@
 import datetime
 import time
 
-dates = pd.date_range('20190309',periods=20) # 產生連續日期
+#產生連續日期
+dates = pd.date_range('20190309',periods=20) 
+
+#字串轉日期格式
+df['date_parsed'] = pd.to_datetime(df['data_org'],infer_datetime_format=True) 
+
+#日期格式轉字串
+date_time = datetime.date(2019,3,22).strftime('%Y-%m-%d')	
+
+#日期計算
+date_time = datetime.date(2019,3,22)
+date1 = datetime.date(2015,9,4)+datetime.timedelta(days=-i)
+
+#現在日期時間
+datetime.datetime.now()
+
+#時間暫停
+time.sleep(10)
+
+#提取時間資料
+df["year"]=pd.to_datetime(df['TIME']).dt.year # 提取年
+df["month"]=pd.to_datetime(df['TIME']).dt.month # 提取月
+df["day"]=pd.to_datetime(df['TIME']).dt.day  # 提取日
+df["hour"]=pd.to_datetime(df['TIME']).dt.hour # 提取时
+df["minute"]=pd.to_datetime(df['TIME']).dt.minute # 提取分
+df["second"]=pd.to_datetime(df['TIME']).dt.second # 提取秒
+df["week"]=pd.to_datetime(df['TIME']).dt.weekday # 星期
+df["quarter"]=pd.to_datetime(df['TIME']).dt.quarter  #季度
+
+
