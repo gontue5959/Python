@@ -1,5 +1,5 @@
 #讀取CSV/TXT格式
-data = pd.read_csv('data.csv', encoding={'big5','utf-8'}, sep={'\t',','}, engine='python', skiprows=2) 
+data = pd.read_csv('data.csv', encoding={'big5','utf-8', 'big5hkscs', 'cp950', 'mbcs'}, sep={'\t',','}, engine='python', skiprows=2) 
 
 #讀取EXCEL
 data = pd.excel('name.xlsx')
