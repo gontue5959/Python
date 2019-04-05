@@ -7,3 +7,13 @@ df.max(axis=1) #取出最大值
 #資料排序--------------------------------------
 df = df.sort_index(axis=1,ascending=True) #依照索引進行排序
 df = df.sort_values(by='a') #依照資料值進行排序
+
+#設置值
+df['t'] = np.nan
+df.ix[1,2] = 1111
+df.ix['20190316','e'] = 6666
+df.t[df.w<0]=-1
+# print(df)
+df.t[df.w>0]=0
+df.t[df.w==-1]=1
+print(df)
