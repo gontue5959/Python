@@ -1,0 +1,27 @@
+import pandas as pd
+
+#merge--------------------------------
+res = pd.merge(df1,df2,on='key')
+res = pd.merge(df3,df4,on=['key1','key2'],how='outer',indicator='顯示合併方法') 
+#how = ['left', 'right', 'outer', 'inner']，预设值how='inner'; 顯示合併方法:indicator=True
+
+#example:
+boys = pd.DataFrame({'01k': ['K0', 'K1', 'K2'], '02age': [1, 2, 3],'03year':[11,22,33]})
+girls = pd.DataFrame({'01k': ['K0', 'K0', 'K3'], '02age': [4, 5, 6],'03year':[44,55,66]})
+print(boys)
+res3 = pd.merge(boys,girls,on='01k',suffixes=['_boy', '_girl'],how='left')
+
+
+#concat------------------------------
+res1 = pd.concat([df1,df2,df3],axis=1,ignore_index=True,join='inner') #重新編碼序號:ignore_index=True;join={'inner','outer'}
+res2 = pd.concat([df1,df2],axis=0,join_axes=[df1.columns])
+res3 = pd.concat([df1,df2],axis=1,join_axes=[df1.index])
+
+
+#append------------------------------
+res5 = df1.append(s1,ignore_index=True)
+
+df_append_all = pd.DataFrame()
+for i in range(30):
+    df_append_all = df_append_all.append( df_all['d'+str(i)] )
+
