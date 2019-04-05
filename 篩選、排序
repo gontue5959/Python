@@ -1,0 +1,9 @@
+#篩選------------------------------------------
+df[df.sex == 'key'] #篩選
+df1 = df[(df.q>7) & (df.q<16)]
+df[df["Start Date"].between("2009-11-10","2010-01-20")]
+df.max(axis=1) #取出最大值
+
+#資料排序--------------------------------------
+df = df.sort_index(axis=1,ascending=True) #依照索引進行排序
+df = df.sort_values(by='a') #依照資料值進行排序
