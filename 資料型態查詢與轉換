@@ -1,0 +1,18 @@
+data.info()	#顯示資料型態
+list(data) #顯示資料欄位
+data.head()
+data.tail() #顯示最後五筆
+data.shape #檔案大小
+
+#型態轉換
+pandas.Series.astype(float)  #轉小數型態
+
+#example:
+price_volume['委量'] = price_volume['委量'].astype('int')
+price_volume['委價'] = price_volume['委價'].astype('float')
+
+#缺失值
+df.isnull().any() #是否有na值
+df.isnull().any().any()
+
+df.isnull().sum() #na值數量
