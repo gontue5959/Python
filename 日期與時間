@@ -1,0 +1,4 @@
+import datetime
+import time
+
+dates = pd.date_range('20190309',periods=20) # 產生連續日期
