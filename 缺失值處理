@@ -1,0 +1,10 @@
+df.dropna(axis=0,how='any', thresh=2) #how={'any','all'}  ->移除缺失 ; thresh留下含有指定個數觀察值得列
+df.fillna(value=0) #df全部缺失值補0
+df.fillna(method='ffill') #缺失值向下填充
+df.fillna(method='bfill') #缺失值向上填充
+df[df['q'] == df['q'].fillna(value=0)] #q行缺失值補0
+df = df.fillna(value=0)
+#-----------------------------------------
+df.dropna(axis=0,how='any', thresh=2) #移除缺失值
+df = df.drop_duplicates(['name'],'last') #移除重複
+df = df.drop(columns=['name'])	#移除欄位
