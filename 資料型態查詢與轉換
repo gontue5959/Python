@@ -6,6 +6,7 @@ data.shape #檔案大小
 
 #型態轉換
 pandas.Series.astype(float)  #轉小數型態
+pandas.Series.astype(str)
 
 #example:
 price_volume['委量'] = price_volume['委量'].astype('int')
