@@ -1,0 +1,6 @@
+data['year'] = [ x[0:4] for x in data['年月'] ] #輸出字串前四位為年到year
+data['sd'] = [ row['市場風險溢酬'] + row['規模溢酬 (3因子)'] for index, row in data.iterrows() ]	#欄位值相加輸出到sd欄
+
+a = [ 1,2,3,4 ]
+b = [1,2,3,3]
+c = [ _a*_b for _a, _b in zip( a, b ) ]
