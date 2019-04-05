@@ -1,0 +1,4 @@
+pandas.Series.astype(float)  #轉小數型態
+
+price_volume['委量'] = price_volume['委量'].astype('int')
+price_volume['委價'] = price_volume['委價'].astype('float')
