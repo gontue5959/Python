@@ -1,3 +1,11 @@
+import pandas as pd
+import numpy as np
+
 #取得最大值
 frame['HighScore'] = frame[['test1','test2','test3']].max(axis=1)
 
+#移動加總
+df['mean_sum'] = df['data'].rolling(3).sum()
+df['mean_max'] = df['data'].rolling(3).max()
+df['mean_std'] = df['data'].rolling(3).std()
+df['mean_mean'] = df['data'].rolling(3).mean()
