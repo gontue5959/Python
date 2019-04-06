@@ -4,3 +4,5 @@ df['mean_max'] = df.groupby(['簡稱'])['收盤價'].rolling(3).max()
 df['mean_std'] = df.groupby(['簡稱'])['收盤價'].rolling(3).std()
 df['mean_mean'] = df.groupby(['簡稱'])['收盤價'].rolling(3).mean()
 
+#lag
+df['price_lag'] = df.groupby(['簡稱'])['收盤價'].shift(1)
