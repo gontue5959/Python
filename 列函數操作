@@ -1,0 +1,3 @@
+#取得最大值
+frame['HighScore'] = frame[['test1','test2','test3']].max(axis=1)
+
