@@ -2,8 +2,9 @@ import pandas as pd
 
 #merge--------------------------------
 res = pd.merge(df1,df2,on='key')
-res = pd.merge(df3,df4,on=['key1','key2'],how='outer',indicator='顯示合併方法') 
+res = pd.merge(df3,df4,on=['key1','key2'],how='outer',indicator='顯示合併方法', left_index=True, right_on='level_1', sort=False) 
 #how = ['left', 'right', 'outer', 'inner']，预设值how='inner'; 顯示合併方法:indicator=True
+#left_index=True，以索引為key; right_on='right_key_name';sort=False，合併完進行排序，預設為True。
 
 #example:
 boys = pd.DataFrame({'01k': ['K0', 'K1', 'K2'], '02age': [1, 2, 3],'03year':[11,22,33]})
