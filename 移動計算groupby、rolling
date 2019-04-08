@@ -6,3 +6,6 @@ df['mean_mean'] = df.groupby(['簡稱'])['收盤價'].rolling(3).mean()
 
 #lag
 df['price_lag'] = df.groupby(['簡稱'])['收盤價'].shift(1)
+
+
+c120 = data['close'].rolling(120, min_periods=120).mean()
