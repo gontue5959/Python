@@ -4,7 +4,14 @@ import matplotlib.pyplot as plt
 import datetime
 import time
 import twstock
+import talib
 
 #print dataframe 對齊參數設定
 pd.set_option('display.unicode.ambiguous_as_wide', True)
 pd.set_option('display.unicode.east_asian_width', True)
+
+
+
+from pandas_datareader import data
+data = data.DataReader("^TWII", "yahoo", "2000-01-01","2018-01-01")
+
