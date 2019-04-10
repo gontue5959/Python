@@ -2,7 +2,7 @@
 pt = pd.pivot_table(dss, values=['yy'],index=['name'], columns=None, aggfunc=np.sum, \
 					fill_value=None, margins = True, margins_name ='All')	#aggfunc=np.sum為分析方法
 #樞紐分析表_使用groupby方式
-pt = data.groupby(['index_A','index_B'])['my_data_columns'].count()
+pt = data.groupby(['index_0','index_1'])['my_data_columns'].count()
 pt = pt.unstack()
 
 #groupby
