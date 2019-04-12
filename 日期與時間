@@ -30,4 +30,9 @@ df["second"]=pd.to_datetime(df['TIME']).dt.second # 提取秒
 df["week"]=pd.to_datetime(df['TIME']).dt.weekday # 星期
 df["quarter"]=pd.to_datetime(df['TIME']).dt.quarter  #季度
 
+#正則表達試
+data['year'] = data['date'].str.extract('(\d+)年', expand=False).astype(int)
+data['month'] = data['date'].str.extract('年(\d+)', expand=False).astype(int)
+data['day'] = data['date'].str.extract('月(\d+)', expand=False).astype(int)
+data['new_date'] = [ datetime.date(x,y,z) for x,y,z in zip(data['year'],data['month'],data['day']) ]
 
