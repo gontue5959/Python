@@ -4,3 +4,6 @@ df = df.rename(index=str, columns={'代碼':'代號','代碼.1':'標的代號','
 
 #Pandas的索引转换为列数据
 df = df.reset_index(level=['簡稱',None]) #level輸入索引名稱
+
+#Pandas的列数据转换为索引
+df = df.set_index('date')
