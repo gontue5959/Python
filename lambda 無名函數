@@ -1,0 +1,21 @@
+#filter
+e = [5, 7, 9, 2, 3]
+f = []
+for i in filter(lambda x: x > 10, e):
+    f.append(i)
+print(f)
+
+#map
+g = [5, 7, 9, 2, 3]
+h = []
+for i in map(lambda x: x * 2 + 10, g):
+    h.append(i)
+print(h)
+
+
+
+
+
+
+
+
