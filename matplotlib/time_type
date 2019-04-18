@@ -1,0 +1,29 @@
+import matplotlib.dates as mdates
+import matplotlib.pyplot as plt
+
+#多圖繪製
+fig = plt.figure(1)
+ax1 = fig.add_subplot(211)  #(2,1,1)
+ax1.plot_date(data['data_x'], data['data_y'], 'k-')
+
+ax2 = fig.add_subplot(212)
+ax2.plot_date(df['df_x'], df['df_y'], 'k-',color='red')
+
+set_x = mdates.DateFormatter('%H:%M:%S')
+ax1.xaxis.set_major_formatter(set_x)
+ax2.xaxis.set_major_formatter(set_x)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
