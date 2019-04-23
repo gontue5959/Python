@@ -5,6 +5,17 @@ for i in filter(lambda x: x > 10, e):
     f.append(i)
 print(f)
 
+#example:
+def to2(a):
+    return a%2==0
+to2(123)
+to2(60)
+
+for i in filter(to2,a):
+    a1.append(i)
+a1
+
+
 #map
 g = [5, 7, 9, 2, 3]
 h = []
