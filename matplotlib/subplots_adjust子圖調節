@@ -19,3 +19,4 @@ plt.margins(0.2)
 plt.subplots_adjust(bottom=0.15)
 #title顯示中文
 plt.title('關係圖',fontproperties='SimHei')
+fontproperties={'SimHei','KaiTi'}
