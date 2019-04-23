@@ -8,3 +8,11 @@ bottom = 0.1   # 底部
 top = 0.9      # 顶部
 wspace = 0.2   # 子图水平间距
 hspace = 0.2   # 子图垂直间距
+
+
+#設定坐標軸文字
+plt.xticks(x, labels, rotation='vertical')
+#設定軸與值距離
+plt.margins(0.2)
+#設定底部距離
+plt.subplots_adjust(bottom=0.15)
