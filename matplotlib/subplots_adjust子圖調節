@@ -1,0 +1,10 @@
+matplotlib.pyplot.subplots_adjust(*args, **kwargs)
+subplots_adjust(left=None, bottom=None, right=None, top=None,
+                wspace=None, hspace=None)
+
+left  = 0.125  # 子图(subplot)距画板(figure)左边的距离
+right = 0.9    # 右边
+bottom = 0.1   # 底部
+top = 0.9      # 顶部
+wspace = 0.2   # 子图水平间距
+hspace = 0.2   # 子图垂直间距
