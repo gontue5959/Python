@@ -1,0 +1,9 @@
+import mpl_finance as mpf
+
+
+fig = plt.figure(1)
+ax1 = fig.add_subplot(111)
+mpf.candlestick2_ohlc(ax1, df['開盤價'],df['最高價'],df['最低價'],df['收盤價'],
+                      width=0.5, colorup='r', colordown='green',alpha=0.6)
+plt.show()
+
