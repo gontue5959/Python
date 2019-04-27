@@ -1,0 +1,5 @@
+
+#取得第一張圖的xlim數值
+set_xlim = plt.xlim()
+#設定第二張圖的xlim
+plt.xlim(set_xlim)
