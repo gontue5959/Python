@@ -1,0 +1,13 @@
+x=True if 'a'=='a' else False
+ 
+#意思同於
+if 'a'=='a':
+    x=True
+else :
+    x=False
+
+
+#example:
+my_list = [[1,2,3],[1,2,3],[44,55,66],[77,88,99]]
+df = pd.DataFrame(my_list, columns=['a','s','d'])
+df['rr'] = df['s'].apply(lambda x:x**2 if x>40 else x**(-2))
