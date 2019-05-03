@@ -1,5 +1,12 @@
 #讀取CSV/TXT格式
-data = pd.read_csv('data.csv', encoding={'big5','utf-8', 'big5hkscs', 'cp950', 'mbcs'}, sep={'\t',','}, engine='python', skiprows=2) 
+data = pd.read_csv('data.csv', 
+                    encoding={'big5','utf-8', 'big5hkscs', 'cp950', 'mbcs'}, 
+                    sep={'\t',','}, 
+                    engine='python', 
+                    skiprows=2,
+                    header=None,  #columns name 的所在列,None為無欄名
+                    index_col=0   #將第幾欄設為index 
+                    ) 
 
 #讀取EXCEL
 data = pd.excel('name.xlsx')
