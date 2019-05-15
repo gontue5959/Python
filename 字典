@@ -1,0 +1,8 @@
+dict = {'runoob': '菜鸟教程', 'google': 'Google 搜索'}
+ 
+print "Value : %s" %  dict.setdefault('runoob', None)
+print "Value : %s" %  dict.setdefault('Taobao', '淘宝')
+print "-----------------"
+# 该值包含 Taobao
+for k, v in dict.iteritems():
+    print k, v
