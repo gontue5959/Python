@@ -2,4 +2,6 @@ import os
 
 os.getcwd() #顯示目前資料夾
 
+os.listdir()
+
 rename('old_name','new_name') #修改檔案名稱
