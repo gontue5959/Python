@@ -2,7 +2,6 @@
 for i in stock_list: 
     locals()['X'+str(i)]=pd.DataFrame(ts.realtime.get(i))
 
-
 #字典連續迴圈變數
 df_all = {}
 for i in range(30):
@@ -13,6 +12,9 @@ for i in range(30):
     df_all['d'+str(i)] = pd.read_csv(date_str+' 每日自營商進出.csv',encoding='utf-8', sep=',',engine='python')
     print(i)
 
+#zip
+for i, j in zip(xx, yy):
+	print(i, j)
 
 #顯示迴圈錯誤
 try:
