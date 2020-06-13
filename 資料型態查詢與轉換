@@ -6,6 +6,7 @@ data.shape #檔案大小
 
 #型態轉換
 pandas.Series.astype(float)  #轉小數型態
+DayClosePrice['K棒'] = DayClosePrice['K棒'].apply(lambda x:round(x,2)) #小數取兩位
 pandas.Series.astype(str)
 
 #example:
