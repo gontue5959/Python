@@ -6,7 +6,7 @@ df.max(axis=1) #取出最大值
 
 #資料排序--------------------------------------
 df = df.sort_index(axis=1,ascending=True) #依照索引進行排序
-df = df.sort_values(by='a') #依照資料值進行排序
+df = df.sort_values(by='a', {ascending=False}) #依照資料值進行排序;預設為小到大，ascending=False為大到小
 
 #設置值
 df['t'] = np.nan
