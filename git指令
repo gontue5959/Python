@@ -1,0 +1,15 @@
+#透過pip安裝pyinstaller
+pip install pyinstaller
+#如果失敗可以使用以下的方法進行安裝
+pip install https://github.com/pyinstaller/pyinstaller/archive/develop.tar.gz
+
+常用參數介紹
+pyinstaller -h 來查看參數
+-F 打包成一個exe文件
+–icon=圖標路徑
+-w 使用視窗，無控制台
+-c 使用控制台，無視窗
+-D 創建一個目錄，包含exe以及其他一些依賴性文件
+
+#打包成一個exe文件
+pyinstaller -F .\hello.py
