@@ -18,3 +18,10 @@ df.isnull().any() #是否有na值
 df.isnull().any().any()
 
 df.isnull().sum() #na值數量
+
+
+df.lstrip() #移除字串開頭的空格/空白符
+df.rstrip() #移除字串末尾的空格/空白符
+df.replace(" ", "") #去掉字串中所有的空格/空白符
+df.strip()  #方法去除字串開頭和結尾的空白符
+
