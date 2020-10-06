@@ -14,3 +14,8 @@ c120 = data['close'].rolling(120, min_periods=120).mean()
 #lag
 df['price_lag'] = df.groupby(['簡稱'])['收盤價'].shift(1)
 
+#cum累积计算函数(https://blog.csdn.net/starter_____/article/details/81517389)
+cumsum()	依次给出前1、2、… 、n个数的和
+cumprod()	依次给出前1、2、… 、n个数的积
+cummax()	依次给出前1、2、… 、n个数的最大值
+cummin()	依次给出前1、2、… 、n个数的最小值
