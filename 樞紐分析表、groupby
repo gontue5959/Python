@@ -13,3 +13,7 @@ df.groupby(['A', 'B']).sum()
 #lag
 df['price_lag'] = df.groupby(['簡稱'])['收盤價'].shift(1)
 
+#次數分配表
+Series.value_counts()
+
+
